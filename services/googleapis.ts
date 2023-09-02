@@ -158,7 +158,7 @@ export class GoogleApiService {
 }
 
 export const googleApiService = new GoogleApiService(
-  process.env.NEXT_PUBLIC_GOOGLE_SHEET_CLIENT_EMAIL,
+  "sonsy-242@sonsy-392608.iam.gserviceaccount.com",
   process.env.NEXT_PUBLIC_GOOGLE_SHEET_API_KEY,
   process.env.NEXT_PUBLIC_GOOGLE_SHEET_SPREAD_ID,
 );
