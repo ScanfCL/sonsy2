@@ -154,7 +154,6 @@ export const updateOrderById = async (id: string, newData: string[]) => {
 };
 
 export const deleteOrderById = async (id: string) => {
-  console.log(SHEET_NAME, id);
   await googleApiService.deleteData(SHEET_NAME, id);
   await revalidatePath("/orders");
 };

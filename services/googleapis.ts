@@ -101,9 +101,7 @@ export class GoogleApiService {
   deleteData = async (range: string, id: string) => {
     try {
       const rowNumber = await this._getRowNumberById(range, id);
-      console.log("range", range);
       const sheetId = await this._getSheetId(range, this.spreadsheetId);
-      console.log("sheetId", sheetId);
 
       if (!rowNumber) {
         throw new Error("Row number is not found");

@@ -64,7 +64,6 @@ const OrderCreate = ({ products, productVariants }: OrderCreateProps) => {
   };
 
   const onSubmit: SubmitHandler<CreateOrderInput> = (data) => {
-    console.log("data", data);
     startTransition(async () => {
       await createOrders(data);
       handleConfetti();
@@ -153,7 +152,6 @@ const OrderCreate = ({ products, productVariants }: OrderCreateProps) => {
                     label="Quantity"
                     variant="bordered"
                     placeholder="Input your quantity"
-                    onClear={() => console.log("input cleared")}
                     color={errors.qty ? "danger" : "default"}
                     errorMessage={errors.qty ? "Quantity is required" : ""}
                     validationState={errors.qty ? "invalid" : "valid"}

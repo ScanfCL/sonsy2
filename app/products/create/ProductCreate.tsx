@@ -60,7 +60,6 @@ const ProductCreate = () => {
                 color={errors.name ? "danger" : "default"}
                 variant="bordered"
                 placeholder="Input your product name"
-                onClear={() => console.log("input cleared")}
                 errorMessage={errors.name ? "Name is required" : ""}
                 fullWidth
               />
@@ -72,7 +71,6 @@ const ProductCreate = () => {
                 variant="bordered"
                 placeholder="Input your product description"
                 color={errors.description ? "danger" : "default"}
-                onClear={() => console.log("input cleared")}
                 errorMessage={
                   errors.description ? "Description is required" : ""
                 }

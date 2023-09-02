@@ -62,7 +62,6 @@ const ProductVariantTypeCreate = ({ products }: { products: Product[] }) => {
                 color={errors.name ? "danger" : "default"}
                 variant="bordered"
                 placeholder="Input your product name"
-                onClear={() => console.log("input cleared")}
                 errorMessage={errors.name ? "Name is required" : ""}
                 fullWidth
               />

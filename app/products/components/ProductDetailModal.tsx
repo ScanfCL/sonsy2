@@ -67,7 +67,6 @@ const ProductDetailModal = ({
                   color={errors.name ? "danger" : "default"}
                   variant="bordered"
                   placeholder="Input your product name"
-                  onClear={() => console.log("input cleared")}
                   errorMessage={errors.name ? "Name is required" : ""}
                   defaultValue={product?.name}
                   fullWidth
@@ -80,7 +79,6 @@ const ProductDetailModal = ({
                   variant="bordered"
                   placeholder="Input your product description"
                   color={errors.description ? "danger" : "default"}
-                  onClear={() => console.log("input cleared")}
                   defaultValue={product?.description}
                   errorMessage={
                     errors.description ? "Description is required" : ""
