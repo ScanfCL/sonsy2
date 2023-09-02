@@ -58,7 +58,7 @@ export default function Home() {
               inventory.
             </div>
             <div className="mt-4 text-right">
-              <Link href="/product">
+              <Link href="/products">
                 <Button color="primary" variant="ghost" size="sm">
                   Manage
                 </Button>
