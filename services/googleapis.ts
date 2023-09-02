@@ -157,8 +157,17 @@ export class GoogleApiService {
   };
 }
 
+const googleSheetClientEmail: string = process.env
+  .NEXT_PUBLIC_GOOGLE_SHEET_CLIENT_EMAIL as string;
+
+const googleSheetApiKey: string = process.env
+  .NEXT_PUBLIC_GOOGLE_SHEET_API_KEY as string;
+
+const googleSheetSpreadId: string = process.env
+  .NEXT_PUBLIC_GOOGLE_SHEET_SPREAD_ID as string;
+
 export const googleApiService = new GoogleApiService(
-  "sonsy-242@sonsy-392608.iam.gserviceaccount.com",
-  process.env.NEXT_PUBLIC_GOOGLE_SHEET_API_KEY,
-  process.env.NEXT_PUBLIC_GOOGLE_SHEET_SPREAD_ID,
+  Buffer.from(googleSheetClientEmail, "base64").toString(),
+  Buffer.from(googleSheetApiKey, "base64").toString(),
+  Buffer.from(googleSheetSpreadId, "base64").toString(),
 );
